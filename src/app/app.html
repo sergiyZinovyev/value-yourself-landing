@@ -1,16 +1,58 @@
 <main class="landing">
   <section class="hero" id="about">
-    <header class="header">
+    <header class="header" [style.--scroll-progress]="headerScrollProgress()">
       <a class="header__logo" href="#about" (click)="closeMobileMenu()">
         Цінуй себе!
       </a>
 
       <nav class="header__nav" aria-label="Основна навігація">
-        <a href="#about">Про курс</a>
-        <a href="#program">Програма</a>
-        <a href="#author">Авторка</a>
-        <a href="#reviews">Відгуки</a>
-        <a href="#faq">FAQ</a>
+        <a
+          href="#about"
+          [class.active]="activeSection() === 'about'"
+          (click)="navigateTo('about'); $event.preventDefault()"
+        >
+          Про курс
+        </a>
+
+        <a
+          href="#work-process"
+          [class.active]="activeSection() === 'work-process'"
+          (click)="navigateTo('work-process'); $event.preventDefault()"
+        >
+          Як працюємо
+        </a>
+
+        <a
+          href="#program"
+          [class.active]="activeSection() === 'program'"
+          (click)="navigateTo('program'); $event.preventDefault()"
+        >
+          Програма
+        </a>
+
+        <a
+          href="#result"
+          [class.active]="activeSection() === 'result'"
+          (click)="navigateTo('result'); $event.preventDefault()"
+        >
+          Результат
+        </a>
+
+        <a
+          href="#author"
+          [class.active]="activeSection() === 'author'"
+          (click)="navigateTo('author'); $event.preventDefault()"
+        >
+          Авторка
+        </a>
+
+        <a
+          href="#faq"
+          [class.active]="activeSection() === 'faq'"
+          (click)="navigateTo('faq'); $event.preventDefault()"
+        >
+          FAQ
+        </a>
       </nav>
 
       <a class="header__button" href="#price"> Почати курс </a>
@@ -32,11 +74,13 @@
           <nav class="mobile-menu__nav" aria-label="Мобільна навігація">
             <a href="#about" (click)="closeMobileMenu()"> Про курс </a>
 
+            <a href="#work-process" (click)="closeMobileMenu()">Як працюємо</a>
+
             <a href="#program" (click)="closeMobileMenu()"> Програма </a>
 
-            <a href="#author" (click)="closeMobileMenu()"> Авторка </a>
+            <a href="#result" (click)="closeMobileMenu()">Результат</a>
 
-            <a href="#reviews" (click)="closeMobileMenu()"> Відгуки </a>
+            <a href="#author" (click)="closeMobileMenu()"> Авторка </a>
 
             <a href="#faq" (click)="closeMobileMenu()"> FAQ </a>
           </nav>
@@ -800,7 +844,7 @@
     </div>
   </section>
 
-  <section class="self-discovery">
+  <section class="self-discovery" id="result">
     <div class="self-discovery__inner">
       <div class="self-discovery__content">
         <h2 class="self-discovery__title">
