@@ -1,8 +1,19 @@
 <main class="landing">
   <section class="hero" id="about">
     <header class="header" [style.--scroll-progress]="headerScrollProgress()">
-      <a class="header__logo" href="#about" (click)="closeMobileMenu()">
-        Цінуй себе!
+      <a href="#about" class="logo" (click)="closeMobileMenu()">
+        <img
+          class="logo-icon"
+          src="images/logo.png"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <span class="logo-content">
+          <span class="logo-title"> Цінуй <em>себе!</em> </span>
+
+          <span class="logo-subtitle"> Онлайн-курс про самооцінку </span>
+        </span>
       </a>
 
       <nav class="header__nav" aria-label="Основна навігація">

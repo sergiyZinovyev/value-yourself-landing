@@ -16,6 +16,51 @@ section[id] {
    Header
    ========================= */
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.logo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-title {
+  font-family: var(--font-heading);
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 0.95;
+  white-space: nowrap;
+}
+
+.logo-title em {
+  font-weight: 400;
+}
+
+.logo-subtitle {
+  margin-top: 7px;
+  font-family: var(--font-body);
+  font-size: 7px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-text-muted);
+}
+
 .header {
   position: fixed;
   top: 0;
